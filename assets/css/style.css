@@ -21,12 +21,12 @@ img{
     display: none;
 }
 
-.guess__word{
+.word{
     font-size: 2rem;
    
 }
 
-.guess__word li{
+.word li{
     border-bottom: 1px solid black;
     height: 8vh;
     width: 2rem;
@@ -34,6 +34,6 @@ img{
     padding: 1vh;
 }
 
-.guess__letter{
+.word__letter{
     display: none;
 }

@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Super jeu de pendu, cherche le mots à deviner avant de finir à la potence. Thème Pirate, mieux que Fortnite !">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Pendu - Trouve vite le mot avant de finir entier sur la potence !</title>
 </head>
 <body>
     <section class="container">
+        <!-- TITRE-->
         <div class="row justify-content-center">
             <div class="col-4 text-center">
                 <h1>Pendu</h1>
                 <p>Trouve vite le mot, avant de finir sur la potence ! </p>
+                <button id="play">Play</button>
             </div>
         </div>
+        <!-- Canvas avec le pendu  -->
         <div class="row justify-content-center">
             <div class="col-8 text-center">
                 <img src="./assets/image/head.svg" alt="" >
@@ -27,51 +32,52 @@
                 <canvas id="canvas">Désolé, ton navigateur ne supporte visiblement pas le canvas...</canvas>
             </div>
         </div>
+        <!-- MOT A DEVINNER-->
         <section class="guess">
-            <ul id="wGuess" class="guess__word justify-content-center">
-                <li><div class="guess__letter">H</div></li>
-                <li><div class="guess__letter">E</div></li>
-                <li><div class="guess__letter">L</div></li>
-                <li><div class="guess__letter">L</div></li>
-                <li><div class="guess__letter">O</div></li>
+            <ul id="word" class="word justify-content-center">
+                <!-- Lettre apparaissent ici-->
             </ul>
         </section>
         <div class="row justify-content-center">
+            <!-- LETTRES ALPHABET-->
             <div class="col-10">
                 <ul class="justify-content-center">
-                    <li><button type="button" class="btn btn-warning">A</button></li>
-                    <li><button type="button" class="btn btn-warning">B</button></li>
-                    <li><button type="button" class="btn btn-warning">C</button></li>
-                    <li><button type="button" class="btn btn-warning">D</button></li>
-                    <li><button type="button" class="btn btn-warning">E</button></li>
-                    <li><button type="button" class="btn btn-warning">F</button></li>
-                    <li><button type="button" class="btn btn-warning">G</button></li>
-                    <li><button type="button" class="btn btn-warning">H</button></li>
-                    <li><button type="button" class="btn btn-warning">I</button></li>
-                    <li><button type="button" class="btn btn-warning">J</button></li>
-                    <li><button type="button" class="btn btn-warning">K</button></li>
-                    <li><button type="button" class="btn btn-warning">L</button></li>
-                    <li><button type="button" class="btn btn-warning">M</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">A</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">B</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">C</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">D</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">E</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">F</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">G</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">H</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">I</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">J</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">K</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">L</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">M</button></li>
                 </ul>
             </div>
             <div class="col-10">
                 <ul class="justify-content-center">
-                    <li><button type="button" class="btn btn-warning">N</button></li>
-                    <li><button type="button" class="btn btn-warning">O</button></li>
-                    <li><button type="button" class="btn btn-warning">P</button></li>
-                    <li><button type="button" class="btn btn-warning">Q</button></li>
-                    <li><button type="button" class="btn btn-warning">R</button></li>
-                    <li><button type="button" class="btn btn-warning">S</button></li>
-                    <li><button type="button" class="btn btn-warning">T</button></li>
-                    <li><button type="button" class="btn btn-warning">U</button></li>
-                    <li><button type="button" class="btn btn-warning">V</button></li>
-                    <li><button type="button" class="btn btn-warning">W</button></li>
-                    <li><button type="button" class="btn btn-warning">X</button></li>
-                    <li><button type="button" class="btn btn-warning">Y</button></li>
-                    <li><button type="button" class="btn btn-warning">Z</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">N</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">O</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">P</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">Q</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">R</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">S</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">T</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">U</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">V</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">W</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">X</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">Y</button></li>
+                    <li><button id="btnLetter" type="button" class="btn btn-warning">Z</button></li>
                 </ul>
             </div>
         </div>
     </section>
 </body>
+<!-- Script -->
+<script src="./assets/js/main.js" type="text/javascript"></script>
+<script src="./assets/js/play.js"></script>
 </html>
