@@ -14,6 +14,7 @@ let words = [
 let getRdnWord = () => {
 rdn = Math.round(Math.random() * words.length)
 guessWord = words[rdn].toUpperCase()
+console.log(guessWord)
 }
 
 //Au bouton play, choisir le mot random
@@ -29,4 +30,7 @@ play.addEventListener("click", () => {
         dash.appendChild(letter)
         word.appendChild(dash)
     }
+
+    //Lettres à appuyer
+    getBtn()
 })
