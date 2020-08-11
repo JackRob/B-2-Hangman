@@ -1,10 +1,10 @@
 # Hangman
 
 ## **What's ? :mag_right:**
-Challenge à réalisé. 
+Challenge à réaliser. 
 Le but du challenge est de réaliser un pendu en utilisant HTML/ Javascript.
 
-**Instructions : **  
+**Instructions :**  
 - Proposer un mot caché
 - Pouvoir sélectionner les lettres
 - Verifier si la lettre selectionnée est dans le mort
