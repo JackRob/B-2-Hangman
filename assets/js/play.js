@@ -5,7 +5,7 @@ let reset = document.getElementById("reset")
 let words = [
     "pirate", "boucanier", "flibustier", "ocean", "mer",
     "bateau", "barque", "tonneaux", "poudre", "canon",
-    "pistolet", "sabre", "bicorne", "pont", "boussole",
+    "pistolet", "sabre", "tricorne", "pont", "boussole",
     "vague", "corsaire", "kraken", "rhum", "caraibes",
     "navire", "equipage", "drapeau", "squelette", "pavillon",
     "tresor", "coffre", "carte", "ile"
@@ -24,13 +24,13 @@ play.addEventListener("click", () => {
     getStart()
 })
 
+// Reset la page pour rejouer
 reset.addEventListener("click", () => {
     location.reload()
 })
 
 let getStart = () => {
     reset.style.display = "inline"
-
     getRdnWord()
     // Ajouts de la div et du li pour la lettre trouvée
     for (i in guessWord) {

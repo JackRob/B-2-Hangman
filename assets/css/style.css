@@ -1,54 +1,54 @@
+.resetBtn {
+  display: none;
+}
+
+#reset {
+  /*Class ne fonctionne pas ? */
+  display: none;
+}
+
 ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-    padding: 0 1vw;
-    margin: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-canvas{
-    background: url(../image/potence.svg) no-repeat;
-    background-size: 50%;
-    width: 40vw;
-    background-position: center;
-    margin: 1vh 0;
+li {
+  list-style: none;
+  padding: 0 1vw;
+  margin: 0;
 }
 
-img{
-    display: none;
+canvas {
+  background: url(../image/potence.svg) no-repeat;
+  background-size: 50%;
+  width: 40vw;
+  background-position: center;
+  margin: 1vh 0;
 }
 
-.word{
-    font-size: 2rem;
-   
+img {
+  display: none;
 }
 
-.word li{
-    border-bottom: 1px solid black;
-    margin: 0 1vw;
+.word {
+  font-size: 2rem;
+}
+.word li {
+  border-bottom: 1px solid black;
+  margin: 0 1vw;
+}
+.word__letter {
+  display: none;
 }
 
 .guess {
-    margin: 2vh 0;
+  margin: 2vh 0;
 }
 
-.word__letter{
-    display: none;
+.over {
+  background: #37a0d1;
+  font-size: 2rem;
 }
 
-
-.over{
-    background: rgb(55, 160, 209);
-    font-size: 2rem;
-}
-
-.resetBtn{
-    display: none;
-}
-
-#reset{ /*Class ne fonctionne pas ? */
-    display: none;
-}
+/*# sourceMappingURL=style.css.map */

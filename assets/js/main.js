@@ -20,6 +20,7 @@ let getBtn = () => {
     let nextTo = guessWord.length
     btns.forEach(btn => {
         btn.addEventListener("click", () => {
+            //Recupérer la liste de lettre
             let letterWord = document.querySelectorAll(".word__letter")
             let find = false;
             //SI la lettre cliquée est dans le mots à deviner, alors ajouter
@@ -40,7 +41,7 @@ let getBtn = () => {
 
             if (find) {
                 if (nextTo <= 0) {
-                    over[0].innerHTML = `Bravo ! Vous avez trouvez le mot. :)`
+                    over[0].innerHTML = `Bravo ! Vous avez trouvé le mot. :)`
                     gameOver()
                 }
             } else {
@@ -53,6 +54,7 @@ let getBtn = () => {
     })
 }
 
+//Ajouter un membre à chaque erreur
 let addMember = () => {
     switch (count) {
         case 6:
