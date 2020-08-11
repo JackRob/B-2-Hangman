@@ -1,5 +1,6 @@
 let word = document.getElementById("word")
 let btns = document.querySelectorAll("#btnLetter")
+let over = document.getElementsByClassName("over")
 let guessWord = "" // Le mot à trouver
 let count = 6; // Le nombre de chance 
 
@@ -26,6 +27,8 @@ let getBtn = () => {
                 if (btn.innerHTML === guessWord[i]) {
                     btn.disabled = true;
                     find = true;
+                    nextTo--
+                    console.log(nextTo)
                     for (ltr in letterWord) {
                         letterWord[i].style.display = "block"
                         console.log("display")
@@ -36,9 +39,8 @@ let getBtn = () => {
             }
 
             if (find) {
-                nextTo--
-                console.log(nextTo)
                 if (nextTo <= 0) {
+                    over[0].innerHTML = `Bravo ! Vous avez trouvez le mot. :)`
                     gameOver()
                 }
             } else {
@@ -54,23 +56,24 @@ let getBtn = () => {
 let addMember = () => {
     switch (count) {
         case 6:
-            ctx.drawImage(head, 132, 33)
+            ctx.drawImage(head, 360, 130)
             break;
         case 5:
-            ctx.drawImage(body, 150, 50)
-            ctx.drawImage(head, 132, 33)
+            ctx.drawImage(body, 420, 170)
+            ctx.drawImage(head, 360, 130)
             break;
         case 4:
-            ctx.drawImage(armL, 160, 57)
+            ctx.drawImage(armL, 392, 190)
+            ctx.drawImage(head, 360, 130)
             break;
         case 3:
-            ctx.drawImage(armR, 140, 57)
+            ctx.drawImage(armR, 445, 190)
             break;
         case 2:
-            ctx.drawImage(legL, 154, 80)
+            ctx.drawImage(legL, 445, 250)
             break;
         case 1:
-            ctx.drawImage(legR, 157, 78)
+            ctx.drawImage(legR, 427, 250)
     }
 }
 
@@ -78,6 +81,7 @@ let getCount = () => {
     count--
     if (count <= 0) {
         gameOver()
+        over[0].innerHTML = `Perdu.. Le mot à trouver était "${guessWord}"`
     }
     console.log(count)
 }

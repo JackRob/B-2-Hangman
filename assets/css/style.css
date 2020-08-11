@@ -11,10 +11,10 @@ li{
 
 canvas{
     background: url(../image/potence.svg) no-repeat;
-    background-size: 40%;
-    width: 80%;
+    background-size: 50%;
+    width: 40vw;
     background-position: center;
-    margin: 2vh 0;
+    margin: 1vh 0;
 }
 
 img{
@@ -28,10 +28,11 @@ img{
 
 .word li{
     border-bottom: 1px solid black;
-    height: 8vh;
-    width: 2rem;
     margin: 0 1vw;
-    padding: 1vh;
+}
+
+.guess {
+    margin: 2vh 0;
 }
 
 .word__letter{
@@ -40,5 +41,14 @@ img{
 
 
 .over{
-    background: red;
+    background: rgb(55, 160, 209);
+    font-size: 2rem;
+}
+
+.resetBtn{
+    display: none;
+}
+
+#reset{ /*Class ne fonctionne pas ? */
+    display: none;
 }

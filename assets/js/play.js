@@ -1,4 +1,5 @@
 let play = document.getElementById("play")
+let reset = document.getElementById("reset")
 
 //Liste de mots 
 let words = [
@@ -20,6 +21,16 @@ let getRdnWord = () => {
 //Au bouton play, choisir le mot random
 play.addEventListener("click", () => {
     play.style.display = "none";
+    getStart()
+})
+
+reset.addEventListener("click", () => {
+    location.reload()
+})
+
+let getStart = () => {
+    reset.style.display = "inline"
+
     getRdnWord()
     // Ajouts de la div et du li pour la lettre trouvée
     for (i in guessWord) {
@@ -33,4 +44,4 @@ play.addEventListener("click", () => {
 
     //Lettres à appuyer
     getBtn()
-})
+}

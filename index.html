@@ -20,7 +20,9 @@
             <div class="col-4 text-center">
                 <h1>Pendu</h1>
                 <p>Trouve vite le mot, avant de finir sur la potence ! </p>
-                <button id="play">Play</button>
+                <p>Thème : Piraterie </p>
+                <button id="play" class="btn btn-info">Play</button>
+                <button id="reset" class="btn btn-danger">Reset</button>
             </div>
         </div>
         <!-- Canvas avec le pendu  -->
@@ -32,17 +34,20 @@
                 <img id="armRMan" src="./assets/image/armR.svg" alt="">
                 <img id="legLMan" src="./assets/image/legL.svg" alt="">
                 <img id="legRMan" src="./assets/image/legR.svg" alt="">
-                <canvas id="canvasArea">Désolé, ton navigateur ne supporte visiblement pas le canvas...</canvas>
+                <canvas id="canvasArea" width="800" height="500">Désolé, ton navigateur ne supporte visiblement pas le
+                    canvas...</canvas>
             </div>
         </div>
         <!-- MOT A DEVINNER-->
-        <section class="guess">
-            <div class="over"> Le Mots était : BLBLBLBLblblblblblblblb </div>
-            <ul id="word" class="word justify-content-center">
-                <!-- Lettre apparaissent ici-->
-            </ul>
-        </section>
         <div class="row justify-content-center">
+            <section class="guess col-8 text-center">
+                <ul id="word" class="word justify-content-center">
+                    <!-- Lettre apparaissent ici-->
+                </ul>
+                <div class="over"></div>
+            </section>
+        </div>
+        <section class="row justify-content-center">
             <!-- LETTRES ALPHABET-->
             <div class="col-10">
                 <ul class="justify-content-center">
@@ -78,7 +83,7 @@
                     <li><button id="btnLetter" type="button" class="btn btn-warning">Z</button></li>
                 </ul>
             </div>
-        </div>
+        </section>
     </section>
 </body>
 <!-- Script -->
