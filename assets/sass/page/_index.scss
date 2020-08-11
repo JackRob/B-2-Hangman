@@ -1,0 +1,46 @@
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0 1vw;
+    margin: 0;
+}
+
+canvas{
+    background: url(../image/potence.svg) no-repeat;
+    background-size: 50%;
+    width: 40vw;
+    background-position: center;
+    margin: 1vh 0;
+}
+
+img{
+    display: none;
+}
+
+.word{
+    font-size: 2rem;
+
+    li{
+        border-bottom: 1px solid black;
+        margin: 0 1vw;
+    }
+
+    &__letter{
+        display: none;
+    }
+}
+
+.guess {
+    margin: 2vh 0;
+}
+
+.over{
+    background: rgb(55, 160, 209);
+    font-size: 2rem;
+}
+
