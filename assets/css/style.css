@@ -37,3 +37,8 @@ img{
 .word__letter{
     display: none;
 }
+
+
+.over{
+    background: red;
+}

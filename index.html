@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Super jeu de pendu, cherche le mots à deviner avant de finir à la potence. Thème Pirate, mieux que Fortnite !">
+    <meta name="description"
+        content="Super jeu de pendu, cherche le mots à deviner avant de finir à la potence. Thème Pirate, mieux que Fortnite !">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Pendu - Trouve vite le mot avant de finir entier sur la potence !</title>
 </head>
+
 <body>
     <section class="container">
         <!-- TITRE-->
@@ -23,7 +26,7 @@
         <!-- Canvas avec le pendu  -->
         <div class="row justify-content-center">
             <div class="col-8 text-center">
-                <img id="headMan" src="./assets/image/head.svg" alt="" >
+                <img id="headMan" src="./assets/image/head.svg" alt="">
                 <img id="bodyMan" src="./assets/image/body.svg" alt="">
                 <img id="armLMan" src="./assets/image/armL.svg" alt="">
                 <img id="armRMan" src="./assets/image/armR.svg" alt="">
@@ -34,6 +37,7 @@
         </div>
         <!-- MOT A DEVINNER-->
         <section class="guess">
+            <div class="over"> Le Mots était : BLBLBLBLblblblblblblblb </div>
             <ul id="word" class="word justify-content-center">
                 <!-- Lettre apparaissent ici-->
             </ul>
@@ -80,4 +84,5 @@
 <!-- Script -->
 <script src="./assets/js/main.js" type="text/javascript"></script>
 <script src="./assets/js/play.js"></script>
+
 </html>

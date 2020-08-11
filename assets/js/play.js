@@ -4,7 +4,7 @@ let play = document.getElementById("play")
 let words = [
     "pirate", "boucanier", "flibustier", "ocean", "mer",
     "bateau", "barque", "tonneaux", "poudre", "canon",
-    "pistolet", "sabre", "bicorne", "pont", "boussole", 
+    "pistolet", "sabre", "bicorne", "pont", "boussole",
     "vague", "corsaire", "kraken", "rhum", "caraibes",
     "navire", "equipage", "drapeau", "squelette", "pavillon",
     "tresor", "coffre", "carte", "ile"
@@ -12,17 +12,17 @@ let words = [
 
 //Prendre le mot random dans la liste
 let getRdnWord = () => {
-rdn = Math.round(Math.random() * words.length)
-guessWord = words[rdn].toUpperCase()
-console.log(guessWord)
+    rdn = Math.round(Math.random() * words.length)
+    guessWord = words[rdn].toUpperCase()
+    console.log(guessWord)
 }
 
 //Au bouton play, choisir le mot random
 play.addEventListener("click", () => {
+    play.style.display = "none";
     getRdnWord()
-
     // Ajouts de la div et du li pour la lettre trouvée
-    for(i in guessWord){
+    for (i in guessWord) {
         let dash = document.createElement('li')
         let letter = document.createElement("div")
         letter.className = "word__letter"
